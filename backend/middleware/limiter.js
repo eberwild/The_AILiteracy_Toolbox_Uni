@@ -8,38 +8,6 @@ export const globalLimiter = rateLimit({
     message: 'Too many request, little break for you!'
   }
 });
-
-export const loginLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000 ,
-    max: 10 ,
-    message: {
-        message: 'Too many login attempts!'
-    }
-});
-
-export const registerLimiter = rateLimit({
-    windowMs: 30 * 60 * 1000 ,
-    max: 3 ,
-    message: {
-        message: 'Too many registrations.'
-    }
-});
-
-export const resetLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000 ,
-    max: 2 ,
-    message: {
-        message: 'Too many password changes!'
-    }
-});
-
-export const passwordChangeLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000,
-    max: 2,
-    message: { message: 'Too many password changes!' }
-});
-
-
 export const emailLimiter = rateLimit({
     windowMs: 10 * 60 *1000 ,
     max: 3 ,
@@ -53,19 +21,3 @@ export const submissionLimiter = rateLimit({
         message: 'Too many Tool submissions.'
     }
 });
-
-export const blackBoardLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000 ,
-    max: 3 ,
-    message: {
-        message: 'Too many Blackboard actions.'
-    }
-});
-
-export const deleteBlackboardLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000 ,
-    max: 3 ,
-    message: {
-        message: 'Too many Blackboard actions.'
-    }
-})

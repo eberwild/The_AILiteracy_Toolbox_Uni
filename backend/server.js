@@ -9,13 +9,9 @@ import path from 'path';
 import express from 'express';
 import cors from 'cors';
 // routes
-import userRouter from './routes/userRoutes.js';
 import toolRouter from './routes/toolRoutes.js';
-import blackboardRouter from './routes/blackboardRoutes.js';
 import emailRouter from './routes/emailRoutes.js';
 import ratingRouter from './routes/ratingsRoutes.js';
-// middlewares
-import { globalLimiter } from './middleware/limiter.js';
 // database
 import { createTables } from './database/createTables.js';
 
@@ -35,14 +31,8 @@ app.use((req , _ , next) => {
     next();
 })
 
-// api-routes -> user
-app.use('/api/users' , userRouter);
-
 // api-routes -> tools
 app.use('/api/tools' , toolRouter);
-
-// api-routes -> blackboard
-app.use('/api/blackboard' , globalLimiter , blackboardRouter);
 
 // api-routes -> email
 app.use('/api/email' , emailRouter);
