@@ -1,0 +1,58 @@
+.pillar-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.pillar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+    margin-bottom: 0px;
+    width: 80%;
+}
+.pillar-text {
+    font-size: large;
+    line-height: 1.5;
+    margin-bottom: 0px;
+}
+.pillar-spacer {
+    width: 75%;
+    border-top: 1px solid #ffffff;
+    align-self: center;
+}
+.pillar-section {
+    margin-top: 0px;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    overflow: hidden;
+    height: 400px;
+}
+.pillar-section img {
+    width: 65%;
+    height: 65%;
+    object-fit: cover;
+    border-radius: 9px;
+    flex: 0 0 20%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.pillar-section img:hover {
+    opacity: 0.5;
+}
+.selected-pillar {
+    margin-top: 0px;
+}
+.general-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 80%;
+}

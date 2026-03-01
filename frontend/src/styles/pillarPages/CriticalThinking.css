@@ -1,0 +1,74 @@
+.critical-thinking-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.critical-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+.critical-spacer {
+    width: 75%;
+    border-top: 1px solid #ffffff;
+    align-self: center;
+}
+.critical-text {
+    margin-top: 35px;
+    width: 50%;
+    font-size: large;
+    line-height: 1.5;
+}
+.critical-info {
+    margin-top: 60px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 30px;
+}
+.critical-img {
+    transition: transform 0.3s ease;
+    width: 60%;
+}
+.critical-img:hover {
+    transform: scale(1.3);
+    opacity: 1;
+}
+.critical-problems {
+    margin-top: 60px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+.problem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(59, 54, 54);
+    background-color: rgb(59, 54, 54);
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgb(234, 129, 8);
+    padding: 10px;
+    width: 75%;
+}
+.problem-text {
+    font-size: large;
+}
+.critical-facit {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.critical-facit-text {
+    font-size: large;
+    line-height: 1.5;
+}

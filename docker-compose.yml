@@ -1,0 +1,20 @@
+services:
+  backend:
+    # builds backend dockerfile
+    build: './backend'
+    # get .env variables 
+    env_file:
+      - './backend/.env.docker'
+    ports:
+    # Host-Port : Backend-Container-Port
+      - '5000:3000'
+    volumes:
+      - './backend/data/:/app/data'
+  frontend:
+    build: './frontend'
+    env_file:
+      - './frontend/.env.docker'
+    depends_on:
+      - backend
+    ports:
+      - '3000:4173'

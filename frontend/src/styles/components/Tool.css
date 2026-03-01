@@ -1,0 +1,89 @@
+.tool {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 9px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 85%;
+}
+.tool-description {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    border-radius: 9px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+.tool:hover .tool-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+.tool:hover {
+  transform: translateY(-6px);
+  background-color: #474a50;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.tool-title ,
+.tool-provider{
+    font-size: large;
+    font-weight: bold;
+}
+.tool-img {
+    max-width: 100%;
+    max-height: 140px;
+    min-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.tool-rating {
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 9px;
+    padding:5px;
+}
+.tool-play-button {
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #f07f0e;
+    font-size: 0.9rem;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 0 5px rgba(240, 127, 14, 0.2);
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: auto;
+    max-width: fit-content;
+    text-align: center;
+}
+.tool-play-button:hover {
+    background-color: #f07f0e;
+    color: #000;
+    box-shadow: 0 2px 8px rgba(240, 127, 14, 0.5);
+}
+.tool-play-button:active {
+    background-color: yellow;
+    box-shadow: none;
+    transform : translateY(4px);
+}
