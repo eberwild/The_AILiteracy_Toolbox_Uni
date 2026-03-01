@@ -90,26 +90,9 @@ function AddToolPage() {
                 <h2>Add Your own Tool</h2>
                 <div className="addtool-spacer"></div>
                 <p className="addtool-intro">
-                    Logged-in users can contribute their own AI tools or games by filling out the input fields below.
+                    U can contribute their own AI tools or games by filling out the input fields below.
                     Once submitted, the entry will be reviewed by the admin team. <br/>
                     If approved, the tool will be published on the toolbox page, making it available for all users to explore and play.
-                </p>
-                <p className="blackboard-info">
-                    If you are interested in collaborating with others on an AI tool rather than working alone, you can check the 
-                    <NavLink to="/blackboard" className="blackboard-link">
-                       {" "} Blackboard page {" "}
-                    </NavLink> 
-                    to see if anyone is looking for a collaborator. You can also add your own entry to find someone to work with.
-                </p>
-                <p className="blackboard-info">
-                    To submit a tool or access the Blackboard page, please 
-                    <NavLink to="/login" className="blackboard-link">
-                       {" "} log in {" "}
-                    </NavLink>
-                    or 
-                    <NavLink to="/register" className="blackboard-link">
-                       {" "} sign up {" "}
-                    </NavLink>.
                 </p>
             </div>
 
