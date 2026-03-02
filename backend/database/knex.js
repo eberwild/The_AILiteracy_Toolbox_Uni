@@ -4,7 +4,7 @@ import knex from "knex";
 import path from "path";
 
 
-const DBPath = path.resolve("./data/mydb.sqlite");
+const DBPath = path.resolve("./data/mydb_uni.sqlite");
 
 // configure knex -> sql-data
 const database = knex({

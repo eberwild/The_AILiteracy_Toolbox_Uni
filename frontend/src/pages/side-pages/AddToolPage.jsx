@@ -12,7 +12,7 @@ function AddToolPage() {
         name: '',
         title: '',
         email: '',
-        type: '',
+        tags: '',
         gitURL: '',
         imgURL: '',
         ageRecom: '',
@@ -46,14 +46,7 @@ function AddToolPage() {
         try {
             const result = await checkToolInput(input);
             if(result.status){
-                const token = localStorage.getItem('token');
-                const response = await axios.post(`${API_URL}/api/tools` , input ,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                }
-                );
+                const response = await axios.post(`${API_URL}/api/tools` , input );
                 if(response.status === 201){
                     await sendEmails(input);
                     showServerResponse(response.data.message);
@@ -86,37 +79,14 @@ function AddToolPage() {
 
             <MainHeader/>
 
-            <div className="addtool-intro-section">
-                <h2>Add Your own Tool</h2>
-                <div className="addtool-spacer"></div>
-                <p className="addtool-intro">
-                    U can contribute their own AI tools or games by filling out the input fields below.
-                    Once submitted, the entry will be reviewed by the admin team. <br/>
-                    If approved, the tool will be published on the toolbox page, making it available for all users to explore and play.
-                </p>
-            </div>
-
-            <div className="tool-requirements">
-                <h2>Supported Project Types</h2>
-                <div className="addtool-spacer"></div>
-                <ul style={{lineHeight: 2}}>
-                    <li>Plain HTML/CSS/JS </li>
-                    <li>Node.js</li>
-                    <li>Python Flask</li>
-                </ul>
-                <NavLink to="/requirements"
-                        className="requirements-link"
-                >
-                    Click here for full requirements! 
-                </NavLink>
-            </div>
-
-        <div className="provide-tool-section">
+            <div className="provide-tool-section">
             <h1 className="submit-header">Submit Your Tool here!</h1>
             <div className="addtool-spacer"></div>
             <p className="share-text">
                 Help us grow the AI Toolbox!  
                 Share your interactive game, quiz or teaching tool to help others understand AI concepts in fun and accessible ways.
+                Once submitted, the entry will be reviewed by the admin team. <br/>
+                If approved, the tool will be published on the toolbox page, making it available for all users to explore and play.
             </p>
 
             <div className="intro-steps">
@@ -128,7 +98,7 @@ function AddToolPage() {
                 <div className="intro-step">
                 <div className="intro-text"></div>
                 <p>2. Add your link</p>
-                <small>Include GitHub or working version</small>
+                <small>Include GitHub Link with working version</small>
                 </div>
                 <div className="intro-step">
                 <div className="intro-text"></div>
@@ -172,20 +142,16 @@ function AddToolPage() {
                        }}
                        required />
 
-                <label htmlFor="type">Type*</label>
-                <select id="type" 
-                        name="type" 
-                        value={toolInput.type}
+                <label htmlFor="tags">Tags -- (comma seperated)</label>
+                <input id="tags" 
+                        type="tags"
+                        name="tags" 
+                        value={toolInput.tags}
                         onChange={(event) => {
-                            setToolInput({...toolInput , type: event.target.value})
+                            setToolInput({...toolInput , tags: event.target.value})
                         }}
                         required>
-                <option value="" disabled selected>Choose one</option>
-                <option value="game">Game</option>
-                <option value="education">Education</option>
-                <option value="quiz">Quiz</option>
-                <option value="other">Other</option>
-                </select>
+                </input>
 
                 <label htmlFor="github">GitHub Link*</label>
                 <input type="url" 
@@ -268,6 +234,84 @@ function AddToolPage() {
             </form>
 
         </div>
+
+            <div className="tool-requirements">
+                <h2>Supported Project Types</h2>
+                <div className="addtool-spacer"></div>
+                    <div className="requirements">
+
+                        <div className="req">
+                            <div className="req-header">Plain HTML/CSS/JS </div>
+                            <div className="req-info">For simple browser-based tools and games.</div>
+                            <ul className="req-data">
+                                <li>A public GitHub repository</li>
+                                <li>An index.html file in the root directory</li>
+                                <li>No backend required</li>
+                                <li>All assets must be included in the repository</li>
+                            </ul>
+                            <div className="example-code">
+                            <p>Example:</p>
+                            <pre>
+                                <code>
+{`project/
+ ├── index.html
+ ├── style.css
+ ├── script.js`}
+                                </code>
+                            </pre>
+                        </div>
+                        </div>
+
+                        <div className="req">
+                            <div className="req-header">Node.js </div>
+                            <div className="req-info">For Javascript backend applications.</div>
+                            <ul className="req-data">
+                                <li>A public GitHub repository</li>
+                                <li>A package.json file in the root directory</li>
+                                <li>A valid start script inside package.json</li>
+                                <li>The app must listen on process.env.PORT</li>
+                            </ul>
+                            <div className="example-code">
+                            <p>Example:</p>
+                            <pre>
+                                <code>
+{`const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(\`Server running on port \${port}\`);
+});`}
+                                </code>
+                            </pre>
+                        </div>
+                        </div>
+
+                        <div className="req">
+                            <div className="req-header">Python Flask </div>
+                            <div className="req-info">For Python-based web applications.</div>
+                            <ul className="req-data">
+                                <li>A public GitHub repository</li>
+                                <li>A requirements.txt file</li>
+                                <li>A Flask app (app.py or main.py)</li>
+                                <li>The app must listen on 0.0.0.0 and <br/> use os.environ.get("PORT")</li>
+                            </ul>
+                            <div className="example-code">
+                            <p>Example:</p>
+                            <pre>
+                                <code>
+{`import os
+from flask import Flask
+
+app = Flask(__name__)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)`}
+                                </code>
+                            </pre>
+                        </div>
+                        </div>
+                    </div>
+                
+            </div>
 
     </div>
     )

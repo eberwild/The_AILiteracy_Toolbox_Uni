@@ -4,51 +4,10 @@
     align-items: center;
     margin-bottom: 25px;
 }
-.addtool-intro-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 85px;
-    margin-bottom: 75px;
-}
 .addtool-spacer {
     width: 75%;
     border-top: 1px solid #ffffff;
     align-self: center;
-}
-.addtool-intro {
-    margin-top: 35px;
-    width: 50%;
-    font-size: large;
-    line-height: 1.5;
-}
-.blackboard-info {
-    margin-top: 35px;
-    width: 50%;
-    font-size: large;
-    line-height: 1.5;
-}
-.blackboard-link {
-    color:rgb(234, 129, 8);
-    text-decoration: none;
-}
-.blackboard-link:hover {
-    text-decoration: underline;
-}
-.tool-requirements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 40px;
-}
-.requirements-link {
-    text-decoration: none;
-    color:#f07f0e;
-    font-weight: bold;
-}
-.requirements-link:hover {
-    text-decoration: underline;
 }
 .provide-tool-section {
     display: flex;
@@ -56,7 +15,7 @@
     align-items: center;
     row-gap: 25px;
     width: 80%;
-    margin-top: 45px;
+    margin-top: 75px;
 }
 .intro-steps {
     display: flex;
@@ -163,4 +122,31 @@ input[type="checkbox"] {
     max-width: 400px;
     text-align: center;
     word-wrap: break-word;
+}
+.tool-requirements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+.requirements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.req {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #666;
+    padding: 8px;
+    min-height: unset;
+}
+.req-header {
+    text-decoration: underline;
+    font-weight: bold;
 }
