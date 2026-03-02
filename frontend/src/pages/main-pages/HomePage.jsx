@@ -10,15 +10,16 @@ function HomePage(){
             <MainHeader/>
 
             <div className="website-info">
-                <h2 className="home-title">
+                <h1 className="home-title">
                     The AI Literacy Toolbox
-                </h2>
+                </h1>
 
                 <div className="home-spacer"></div>
 
                 <p className="home-text">
                     The AI Literacy Toolbox helps people understand what artificial intelligence is, 
                     and also how it affects out society.
+                    <br/>
                     It provides practical tools which are contributed by users and by students,
                     explanations for beginner, and learning resources to support a critical, ethical and informed use of AI.
                 </p>
@@ -38,8 +39,17 @@ function HomePage(){
                     <br/>
                     <br/>
 
-                    Long, D., & Magerko, B. (2020). What is AI Literacy? 
-                    Competencies and Design Considerations.  
+                    Long, D., & Magerko, B. (2020). What is AI literacy? Competencies and design considerations. 
+                    Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems, 1–16. 
+
+                    <br/> 
+
+                    <a href="https://dl.acm.org/doi/10.1145/3313831.3376727"
+                        target="_blank"
+                        className="thesis-link"
+                    >
+                        https://dl.acm.org/doi/10.1145/3313831.3376727
+                    </a>
                     
                 </p>
             </div>
