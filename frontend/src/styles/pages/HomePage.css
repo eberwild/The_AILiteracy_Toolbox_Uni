@@ -9,7 +9,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 75px;
     background-color: #423c3c;
     border-radius: 10px;
     padding: 20px;
@@ -25,6 +24,7 @@
     width: 100%;
     font-size: large;
     line-height: 1.5;
+    text-align: center;
 }
 .website-info {
     display: flex;
@@ -42,6 +42,7 @@
     width: 100%;
     font-size: large;
     line-height: 1.5;
+    text-align: center;
 }
 .thesis-link {
     text-decoration: none;
