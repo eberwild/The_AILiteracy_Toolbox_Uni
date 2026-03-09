@@ -7,7 +7,7 @@ function Footer() {
         <>
             <footer className='footer'>
                 <p>© 2026 Kevin Flotow | Bachelorarbeit Angewandte Informatik – Universität Duisburg-Essen</p>
-                <NavLink className='impressum-link' to="/impressum">Impressum</NavLink>
+                <NavLink className='impressum-link' to="/imprint">Imprint</NavLink>
             </footer>
         </>
     )

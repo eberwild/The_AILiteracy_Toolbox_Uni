@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/components/FAQItem.css';
+import '../styles/components/FAQitem.css';
 
 function FAQItem({ question, answer }) {
   

@@ -8,6 +8,7 @@ import ToolsPage from './pages/main-pages/ToolsPage';
 import ContactPage from './pages/main-pages/ContactPage';
 // side pages
 import AddToolPage from './pages/side-pages/AddToolPage';
+import Imprint from './pages/side-pages/Imprint';
 // pillar pages
 import UnderstandingAI from './components/pillar-components/UnderstandingAI';
 import CriticalThinking from './components/pillar-components/CriticakThinking';
@@ -41,7 +42,9 @@ function App() {
                       element={<AddToolPage/>} />
             <Route path='/contact'
                       element={<ContactPage/>} />
-        </Routes> 
+            <Route path='/imprint'
+                      element={<Imprint/>} />    
+      </Routes> 
     </>
   )
 }
