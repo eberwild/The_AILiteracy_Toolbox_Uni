@@ -1,5 +1,5 @@
 import { getAllTools , insertTool } from "../models/toolModel.js";
-import { testRepoRenderMulti } from "../utils/renderRepoTest.js";
+import { testRepoStructure } from "../utils/repoStructureTest.js";
 
 // get all tools for render
 export const fetchallTools = async( _ , res) => {
@@ -61,11 +61,11 @@ export const provideNewTool = async(req , res) => {
             })
         }
 
-        // test if the submitted repoURL is able to load -> via external render
-        const validGitRepoRender = await testRepoRenderMulti(gitURL);
-        if (!validGitRepoRender.status) {
+        // test if the submitted repoURL is structured like we defined it
+        const validGitRepoStructure = await testRepoStructure(gitURL);
+        if (!validGitRepoStructure.status) {
             return res.status(400).json({ 
-                message: validGitRepoRender.text 
+                message: validGitRepoStructure.text 
             });
         }
     

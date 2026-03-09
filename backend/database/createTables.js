@@ -12,7 +12,7 @@ export const createTables = async () => {
       table.string("name").notNullable(); 
       table.string("title").notNullable().unique();
       table.string("provider_email").notNullable();
-      table.string("type").notNullable();
+      table.string("tags").notNullable();
       table.string("git_URL").notNullable().unique();
       table.string("renderURL").defaultTo("").unique();
       table.string("img_URL").notNullable();
