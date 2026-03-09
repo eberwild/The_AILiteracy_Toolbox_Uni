@@ -12,7 +12,7 @@
     width: 80%;
 }
 .pillar-spacer {
-    width: 75%;
+    width: 25%;
     border-top: 1px solid #ffffff;
     align-self: center;
 }
@@ -49,4 +49,10 @@
     align-items: center;
     margin-top: 50px;
     width: 80%;
+    background-color: #423c3c;
+    border-radius: 10px;
+    padding: 20px;
+}
+.pillar-text li {
+    line-height: 1.8;
 }
