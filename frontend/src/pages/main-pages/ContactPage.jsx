@@ -15,22 +15,34 @@ function ContactPage() {
             <div className='aboutUs-section'>
                 <h2>About Us</h2>
                 <div className='contact-spacer'></div>
-                <p className='about-info'>
-                    The project originally started as a student group initiative at the University of Duisburg-Essen, 
-                    aimed at providing practical, real-world learning experiences in artificial intelligence.
-                    <br/>
-                    <br/>
-                    The project was continued and finalized as part of my Bachelor thesis. During this phase, 
-                    I added new functionalities and refined the existing tools, 
-                    turning the toolbox into a complete, fully functional educational resource.
-                    <br/>
-                    <br/>
-                    The project was supervised by <a className='prof-link' href="https://iachounta.com/website/">Prof. Dr. Irene‑Angelica Chounta</a>
-                    , Professor of Computational Methods in Modeling and Analysis of Learning Processes at the University of Duisburg‑Essen. 
-                    Her research focuses on computational learning analytics, 
-                    AI in education, and educational technologies, providing valuable guidance on educational and technical aspects of the project.
-                </p>
+                    <p className='about-info'>
+                        The project originally started as a student group initiative at the University of Duisburg-Essen, 
+                        aimed at providing practical, real-world learning experiences in artificial intelligence.
+                        <br/>
+                        The project was continued and finalized as part of a Bachelor thesis. During this phase, additional functionalities were 
+                        implemented and existing tools were refined, transforming the toolbox into a complete and fully functional educational resource.
+                        
+                        The project was supervised by <a className='prof-link' href="https://iachounta.com/website/">Prof. Dr. Irene‑Angelica Chounta</a>
+                        , Professor of Computational Methods in Modeling and Analysis of Learning Processes at the University of Duisburg‑Essen. 
+                        Her research focuses on computational learning analytics, 
+                        AI in education, and educational technologies, providing valuable guidance on educational and technical aspects of the project.
+                    </p>
             </div>
+
+            <section className="faq-section">
+            <h2 className='faq-header'>Frequently Asked Questions (FAQ)</h2>
+            <div className='faq-spacer'></div>
+
+            {faqData.map (faq => (
+
+                <FAQItem 
+                    key={faq.id}
+                    question={faq.question}
+                    answer={faq.answer}
+                    />
+            ))}
+
+            </section>
 
             <div className='author-section'>
                 <h2>Project Author</h2>
@@ -57,28 +69,16 @@ function ContactPage() {
                 <h2>Contact Us</h2>
                 <div className="contact-spacer"></div>
                 <p className="contact-intro">
-                    Got questions, suggestions, or ideas for collaboration?<br />
-                    <br/>
-                    <br/>
-                    Not sure if you need to contact us? Maybe your question has already been answered below. 
-                    Check out our FAQ section — we’ve gathered some of the most common queries to help you out quickly!
+                Got questions, suggestions, or ideas for collaboration?<br/>
+                <br/>
+                Email: Colabs@UniEmail.de
+                <br/>
+                Not sure if you need to contact us? Maybe your question has already been answered below. 
+                Check out our FAQ section — we’ve gathered some of the most common queries to help you out quickly!
                 </p>
             </div>
 
-            <section className="faq-section">
-            <h2 className='faq-header'>Frequently Asked Questions (FAQ)</h2>
-            <div className='contact-spacer'></div>
-
-            {faqData.map (faq => (
-
-                <FAQItem 
-                    key={faq.id}
-                    question={faq.question}
-                    answer={faq.answer}
-                    />
-            ))}
-
-            </section>
+            
 
             <Footer/>
 
