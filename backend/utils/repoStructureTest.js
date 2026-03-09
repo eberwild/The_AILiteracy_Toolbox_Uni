@@ -1,18 +1,7 @@
 import simpleGit from "simple-git";
 import fs from "fs-extra";
 import tmp from "tmp";
-import crypto from "crypto";
 
-/**
- * Test if a GitHub repo contains the necessary files
- * to match one of the 3 supported project types:
- * 1) Plain Web Project (HTML/JS/CSS)
- * 2) Node.js Project (React/Vite or JS backend)
- * 3) Python Project (Flask/FastAPI)
- *
- * @param {string} repoUrl - Public GitHub repository URL
- * @returns {Promise<{status: boolean, text?: string}>}
- */
 export async function testRepoStructure(repoUrl) {
   // Create a temporary folder for cloning
   const tmpDir = tmp.dirSync({ unsafeCleanup: true });
