@@ -15,15 +15,14 @@ function UnderstandingAI(){
                 <p className="understanding-text">
                     Understanding AI refers to the ability to grasp what artificial intelligence is, how it works at a basic level,
                     what it can and cannot do, and how AI systems are created, trained, and used in real-world contexts.
-                </p>
-            </div>
-
-            <div className="understanding-info">
-                <p className="understanding-text">
+                    <br/>
                     Artificial Intelligence is often talked about as if it were one single thing.
                     In reality, AI is a broad field made up of many different disciplines, methods,
                     and technologies that work together to enable machines to perform tasks that normally require human intelligence.
                 </p>
+            </div>
+
+            <div className="understanding-info">
                 <div className="understanding-fields">
                     <img src={AIFields} 
                         alt="fields-of_AI" 
