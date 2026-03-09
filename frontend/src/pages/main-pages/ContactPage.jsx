@@ -73,7 +73,7 @@ function ContactPage() {
                 <br/>
                 Email: Colabs@UniEmail.de
                 <br/>
-                Not sure if you need to contact us? Maybe your question has already been answered below. 
+                Not sure if you need to contact us? Maybe your question has already been answered. 
                 Check out our FAQ section — we’ve gathered some of the most common queries to help you out quickly!
                 </p>
             </div>
