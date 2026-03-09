@@ -9,17 +9,22 @@
     align-items: center;
     margin-top: 85px;
     margin-bottom: 75px;
+    background-color: #423c3c;
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
 }
 .tools-spacer {
-    width: 75%;
+    width: 22%;
     border-top: 1px solid #ffffff;
     align-self: center;
 }
 .tools-intro {
     margin-top: 35px;
-    width: 50%;
+    width: 100%;
     font-size: large;
     line-height: 1.5;
+    text-align: center;
 }
 .search-here {
     font-size: large;

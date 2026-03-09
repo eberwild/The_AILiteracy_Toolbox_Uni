@@ -108,8 +108,7 @@ function ToolsPage() {
 
             <MainHeader/>
 
-            <div className="tools-intro-section"
-            >
+            <div className="tools-intro-section">
                 <h2>AI Literacy Tools</h2>
                 <div className="tools-spacer"></div>
                 <p className="tools-intro">
@@ -117,9 +116,8 @@ function ToolsPage() {
                     build AI literacy in a practical and engaging way. By playing, experimenting, and exploring,
                     you can better understand how AI works, how it is used, and how to interact with it critically and responsibly.
                     <br/>
-                    At the bottom of the page, registered users can submit their own tools or games to the toolbox. 
-                    After a review process, approved submissions will be made visible to all users.
-                    You can play and explore the tools without an account but contributing to the toolbox requires registration.
+                    At the bottom of the page, you will be redirected to a page where you can submit your own Toolbox.
+                    After a review process, approved submissions will be made public.
                     <br/>
                     <br/>
                     If you want to rate a tool, just click on the corresponding star-rating.
