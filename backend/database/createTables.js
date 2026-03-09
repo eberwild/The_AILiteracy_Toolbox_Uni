@@ -1,6 +1,5 @@
 import database from "./knex.js";
 
-// create user table
 export const createTables = async () => {
 
   // create tools table
