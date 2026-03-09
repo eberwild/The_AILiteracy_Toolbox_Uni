@@ -12,6 +12,7 @@ import PracticalSkillsComp from '../../components/pillar-components/PracticalSki
 import UnderstandingAIComp from '../../components/pillar-components/UnderstandingAI';
 
 import MainHeader from '../../components/MainHeader';
+import Footer from '../../components/Footer';
 import '../../styles/pages/PillarPage.css';
 
 function PillarPage() {
@@ -27,10 +28,6 @@ function PillarPage() {
             <div className='pillar-info'>
             <h2>The 4 Pillars of AI Literacy</h2>
                 <div className="pillar-spacer"></div>
-                <p className='pillar-text'>
-                    Click on the picture of the pillar you want to learn more about.
-                </p>
-            
             </div>
 
 
@@ -85,6 +82,8 @@ function PillarPage() {
                         They are tools, not independent thinkers.
                     </p>
             </div>
+
+            <Footer/>
 
         </div>
     )

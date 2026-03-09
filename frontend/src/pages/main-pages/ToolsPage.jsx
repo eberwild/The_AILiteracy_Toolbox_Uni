@@ -1,7 +1,8 @@
 import { useState , useRef , useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import MainHeader from "../../components/MainHeader";
+import MainHeader from '../../components/MainHeader';
+import Footer from '../../components/Footer';
 import '../../styles/pages/ToolsPage.css';
 import Tool from '../../components/Tool';
 
@@ -206,6 +207,8 @@ function ToolsPage() {
                      }}>
                 Provide a tool
             </button>
+
+            <Footer/>
     
         </div>
     )

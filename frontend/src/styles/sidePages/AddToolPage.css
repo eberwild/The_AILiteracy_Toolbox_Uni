@@ -136,6 +136,8 @@ input[type="checkbox"] {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    margin-top: 35px;
+    line-height: 2;
 }
 .req {
     display: flex;
@@ -149,4 +151,11 @@ input[type="checkbox"] {
 .req-header {
     text-decoration: underline;
     font-weight: bold;
+}
+pre {
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: large;
 }

@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+.impressum-link {
+    text-decoration: none;
+    color: #f07f0e;
+}
+.impressum-link:hover {
+    text-decoration: underline;
+}

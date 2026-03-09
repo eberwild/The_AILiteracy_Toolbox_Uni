@@ -8,7 +8,6 @@ import ToolsPage from './pages/main-pages/ToolsPage';
 import ContactPage from './pages/main-pages/ContactPage';
 // side pages
 import AddToolPage from './pages/side-pages/AddToolPage';
-import Requirements from './pages/side-pages/Requirements';
 // pillar pages
 import UnderstandingAI from './components/pillar-components/UnderstandingAI';
 import CriticalThinking from './components/pillar-components/CriticakThinking';
@@ -40,8 +39,6 @@ function App() {
                       element={<ToolsPage/>} />
             <Route path='/add-tool'
                       element={<AddToolPage/>} />
-            <Route path='/requirements'
-                      element={<Requirements/>} />
             <Route path='/contact'
                       element={<ContactPage/>} />
         </Routes> 

@@ -1,4 +1,5 @@
-import MainHeader from "../../components/MainHeader";
+import MainHeader from '../../components/MainHeader';
+import Footer from '../../components/Footer';
 import axios from 'axios';
 import '../../styles/sidePages/AddToolPage.css';
 import { NavLink } from 'react-router';
@@ -312,6 +313,8 @@ if __name__ == "__main__":
                     </div>
                 
             </div>
+
+            <Footer/>
 
     </div>
     )

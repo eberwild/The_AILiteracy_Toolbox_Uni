@@ -1,51 +1,11 @@
 import MainHeader from '../../components/MainHeader';
-import axios from 'axios';
+import Footer from '../../components/Footer';
 import '../../styles/pages/ContactPage.css';
 import faqData from '../../data/faqData';
 import FAQItem from '../../components/FAQItem';
-import { useState , useRef} from 'react';
-import { validateContact } from '../../utils/contactValidation.js';
 
 function ContactPage() {
 
-    const [ message , setMessage ] = useState('');
-    const [ visible , setVisible ] = useState(false);
-    
-    const timerRef = useRef(null);
-
-    // show quick toast with server repsonse
-    function showServerResponse(text) {
-        setMessage(text);
-        setVisible(true);
-
-        if(timerRef.current){
-            clearTimeout(timerRef);
-        }   
-
-        timerRef.current = setTimeout(() => {
-            setVisible(false);
-        } , 3000)
-    }
-
-    // state object for email contact
-    const [contact , setContact ] = useState({
-        email: "" ,
-        message: ""
-    })
-
-    async function sendContactMail(input) {
-        try{
-            const response = axios.post('http://localhost:5000/api/email/contact' , {
-                email: input.email ,
-                message: input.message
-            });
-            if(response.ok){
-                showServerResponse((await response).data.message)
-            }
-        } catch(err) {
-            showServerResponse(err.response.data.message);
-        }
-    }
 
     return(
 
@@ -98,7 +58,6 @@ function ContactPage() {
                 <div className="contact-spacer"></div>
                 <p className="contact-intro">
                     Got questions, suggestions, or ideas for collaboration?<br />
-                    Fill out the form below and we’ll get back to you as soon as possible.
                     <br/>
                     <br/>
                     Not sure if you need to contact us? Maybe your question has already been answered below. 
@@ -121,53 +80,7 @@ function ContactPage() {
 
             </section>
 
-            <h2>Contact us here via Email</h2>
-            <div className='contact-spacer'></div>
-
-            <form className='contact-form'>
-
-                <label htmlFor="email">Email*</label>
-                <input className='contact-email' required 
-                    id='email'
-                    value={contact.email}
-                    onChange={(event) => {
-                        setContact({...contact , email: event.target.value})
-                    }}/>
-
-                <label htmlFor="message">Message*</label>
-                <textarea className='contact-text-area' 
-                          id='message'
-                          rows="5" 
-                          required
-                          value={contact.message}
-                            onChange={(event) => {
-                                setContact({... contact , message: event.target.value})
-                        }}>      
-                </textarea>
-
-                <div className="server-info"
-                    style={{display: visible ? 'block' : 'none' }}>
-                    {message}
-                </div>
-
-                <button type="button" 
-                        className="submit-button" 
-                        id="submit-button"
-                        onClick={ async () => {
-                            const result = validateContact(contact);
-                            if(result.status){
-                                await sendContactMail(contact);
-                            } else {
-                                showServerResponse(result.text);
-                            }
-                            
-                        }}
-                >
-                    Send Message
-                </button>
-
-            </form>
-            
+            <Footer/>
 
         </div>
     )

@@ -1,4 +1,5 @@
 import MainHeader from "../../components/MainHeader";
+import Footer from "../../components/Footer";
 import '../../styles/pages/HomePage.css';
 function HomePage(){
 
@@ -54,6 +55,7 @@ function HomePage(){
                 </p>
             </div>
 
+            <Footer/>
 
         </div>
         </>
