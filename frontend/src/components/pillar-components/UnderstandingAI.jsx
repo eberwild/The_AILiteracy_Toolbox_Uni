@@ -1,8 +1,15 @@
 import MainHeader from "../../components/MainHeader";
 import '../../styles/pillarPages/UnderstandingAI.css';
-import AIFields from '../../assets/pillarPages/AI-fields.png';
+import machineLearning from '../../assets/pillarPages/understanding-ai/machine-learning.png';
+import languageProcessing from '../../assets/pillarPages/understanding-ai/language-processing.png';
+import neuralNetworks from '../../assets/pillarPages/understanding-ai/neural-networks.png';
+import dataStatistics from '../../assets/pillarPages/understanding-ai/data-statictics.png';
+import computerVision from '../../assets/pillarPages/understanding-ai/computer-vision.png';
+import { useState } from "react";
 
 function UnderstandingAI(){
+
+    const [activeInfo , setActiveInfo] = useState("");
 
     return(
 
@@ -23,29 +30,26 @@ function UnderstandingAI(){
             </div>
 
             <div className="understanding-info">
-                <div className="understanding-fields">
-                    <img src={AIFields} 
-                        alt="fields-of_AI" 
-                        className="fields-img"
-                    />
+                <div className="understanding-images">
 
-                <p className="fields-info">
-                    <strong>Machine Learning</strong> – Systems that learn patterns from data instead of being explicitly programmed.
-                    <br/>
-                    <br/>
-                    <strong>Neural Networks</strong> – Models inspired by the human brain, used to recognize complex patterns.
-                    <br/>
-                    <br/>
-                    <strong>Data & Statistics</strong> – The foundation that allows AI systems to learn, predict, and improve.
-                    <br/>
-                    <br/>
-                    <strong>Natural Language Processing</strong> – Enables machines to understand and generate human language.
-                    <br/>
-                    <br/>
-                    <strong>Computer Vision</strong> – Allows AI to interpret images and videos.
-                </p>
-   
+                    <img src={machineLearning} alt="machine-learning-img" className="fields-img"
+                        onClick={() => setActiveInfo('Machine Learning – Systems that learn patterns from data instead of being explicitly programmed.')}/>
+
+                    <img src={languageProcessing} alt="language-processing-img" className="fields-img"
+                        onClick={() => setActiveInfo('Natural Language Processing – Enables machines to understand and generate human language.')}/>
+
+                    <img src={neuralNetworks} alt="neural-networks-img" className="fields-img" 
+                        onClick={() => setActiveInfo('Neural Networks – Models inspired by the human brain, used to recognize complex patterns.')}/>
+
+                    <img src={dataStatistics} alt="data-statistics-img" className="fields-img" 
+                        onClick={() => setActiveInfo('Data & Statistics – The foundation that allows AI systems to learn, predict, and improve.')}/>
+
+                    <img src={computerVision} alt="computer-vision-img" className="fields-img" 
+                        onClick={() => setActiveInfo('Computer Vision – Allows AI to interpret images and videos.')}/>
+                    
                 </div>
+
+                <div className="field-info">{activeInfo}</div>
 
                 <div className="understanding-limits">
 

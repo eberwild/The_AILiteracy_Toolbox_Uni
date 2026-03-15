@@ -29,9 +29,10 @@
     flex-direction: column;
     align-items: center;
 }
-.understanding-fields {
+.understanding-images {
     margin-top: 60px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -39,16 +40,23 @@
     width: 80%;
 }
 .fields-img {
-    flex: 0 0 30%;
-    width: 45%;
-    height: 45%;
+    flex: 0 0 20%;
+    width: 20%;
+    height: 20%;
     object-fit: cover;
     border-radius: 9px;
-    transition: transform 0.3s ease;
 }
 .fields-img:hover {
-    transform: scale(1.3);
-    opacity: 1;
+    opacity: 0.5;
+}
+.field-info {
+    margin-top: 35px;
+    padding: 22px;
+    border-radius: 12px;
+    background-color: rgb(59, 54, 54);
+    color: white;
+    box-shadow: 0 2px 10px rgb(234, 129, 8);
+    border: 1px solid rgb(59, 54, 54);
 }
 .understanding-info {
     flex: 1 0 70%;
