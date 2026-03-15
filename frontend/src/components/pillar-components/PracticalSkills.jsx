@@ -17,6 +17,7 @@ function PracticalSkills() {
                     providing meaningful inputs,
                     interpreting outputs,
                     and applying results appropriately while understanding their limitations.
+                    Practical skills empower users to use AI efficiently, creatively, and responsibly in everyday life.
                 </p>
             </div>
 
@@ -65,11 +66,6 @@ function PracticalSkills() {
                     
                 </div>
 
-                <div className="practical-facit">
-                    <p className="practical-text">
-                        Practical skills empower users to use AI efficiently, creatively, and responsibly in everyday life.
-                    </p>
-                </div>
 
             </div>
         </div>
