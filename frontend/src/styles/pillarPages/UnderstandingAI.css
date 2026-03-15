@@ -37,10 +37,10 @@
     align-items: center;
     justify-content: space-around;
     column-gap: 30px;
-    width: 80%;
+    width: 60%;
 }
 .fields-img {
-    flex: 0 0 20%;
+    flex: 0 0 30%;
     width: 20%;
     height: 20%;
     object-fit: cover;
@@ -50,6 +50,8 @@
     opacity: 0.5;
 }
 .field-info {
+    font-size: large;
+    font-weight: bold;
     margin-top: 35px;
     padding: 22px;
     border-radius: 12px;

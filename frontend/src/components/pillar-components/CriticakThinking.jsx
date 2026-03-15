@@ -1,8 +1,18 @@
+import { useState } from "react";
 import MainHeader from "../../components/MainHeader";
 import '../../styles/pillarPages/CriticalThinking.css';
-import Critical from '../../assets/pillarPages/critical-awerness.png';
+
+import Accuracy from '../../assets/pillarPages/critical-thinking/accuracy.png';
+import Biased from '../../assets/pillarPages/critical-thinking/biased.png';
+import ContextAwerness from '../../assets/pillarPages/critical-thinking/context-awerness.png';
+import DataQuality from '../../assets/pillarPages/critical-thinking/data-quality.png';
+import Accountability from '../../assets/pillarPages/critical-thinking/accountability.png';
+
+
 
 function CriticalThinking() {
+
+    const [activeInfo , setActiveInfo] = useState('');
 
     return(
 
@@ -19,57 +29,22 @@ function CriticalThinking() {
                     </p>
                 </div>
 
-                <div className="critical-info">
+                <div className="critical-fields">
 
-                    <img src={Critical} 
-                        alt="" 
-                        className="critical-img"
-                    />
-
-                    <p className="critical-text">
-                        AI systems can generate convincing answers, images, and recommendations.
-                        <br/>
-                        <br/>
-                        However, they can also make mistakes, reflect biases, or produce misleading results.
-                        <br/>
-                        <br/>
-                        Critical thinking helps users evaluate AI outputs instead of blindly trusting them.
-                    </p>
+                    <img src={Accuracy} alt="accuracy-img" className="critical-img"
+                        onClick={() => setActiveInfo('Accuracy - Verify whether the AI’s information is correct and supported by reliable sources.')}/>
+                    <img src={Biased} alt="biased-img" className="critical-img" 
+                        onClick={() => setActiveInfo('Biased - AI can reflect biases present in its training data,leading to unfair or misleading results.')}/>
+                    <img src={ContextAwerness} alt="context-awerness-img" className="critical-img"
+                        onClick={() => setActiveInfo('Contextawerness -  AI does not understand situations, emotions, or intentions the way humans do.')}/>
+                    <img src={DataQuality} alt="data-quality-img" className="critical-img" 
+                        onClick={() => setActiveInfo('Dataquality - The quality of AI results depends on the quality of the data behind them.')}/>
+                    <img src={Accountability} alt="accountability-img" className="critical-img" 
+                        onClick={() => setActiveInfo('Accountability - AI provides suggestions, but humans are responsible for the final decisions.')}/>
 
                 </div>
 
-                <div className="critical-problems">
-                    <div className="problem">
-                        <h2> AI can be wrong</h2>
-                        <p className="problem-text">
-                            AI systems do not always provide correct or complete answers.
-                            They predict likely outcomes based on data, not truth.
-                        </p>
-                    </div>
-
-                    <div className="problem">
-                        <h2>AI can be biased</h2>
-                        <p className="problem-text">
-                            AI can reflect biases present in its training data,
-                            leading to unfair or misleading results.
-                        </p>
-                    </div>
-
-                    <div className="problem">
-                        <h2>AI lacks context</h2>
-                        <p className="problem-text">
-                            AI does not understand situations, emotions, or intentions the way humans do.
-                        </p>
-                    </div>
-
-                    <div className="problem">
-                        <h2>Confidence ≠ correctness</h2>
-                        <p className="problem-text">
-                             AI outputs may sound confident even when they are inaccurate.
-                        </p>
-                    </div>
-            
-                </div>
+                <div className="active-info">{activeInfo}</div>
 
                 <div className="critical-facit">
                     <h2>Before trusting an AI result, ask yourself:</h2>
