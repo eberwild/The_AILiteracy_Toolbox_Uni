@@ -1,8 +1,10 @@
 import MainHeader from "../../components/MainHeader";
 import '../../styles/pillarPages/PracticalSkills.css';
-import Practical from '../../assets/pillarPages/practical-skills.png';
+import { useState } from "react";
 
 function PracticalSkills() {
+
+    const [activeInfo , setActiveInfo] = useState('');
 
     return(
 
@@ -21,52 +23,27 @@ function PracticalSkills() {
                 </p>
             </div>
 
-            <div className="practical-info">
+            <div className="practical-fields">
 
-                <img src={Practical} 
-                     alt="practical-diagramm"
-                     className="practical-img"
-                />
+{/*
+                <img src={Prompting} alt="prompting-img" className="practical-img"
+                    onClick={() => setActiveInfo('Writing clear and precise instructions helps AI produce more useful and relevant results.')}/>
+                
+                <img src={ToolSelection} alt="select-tool-img" className="practical-img"
+                    onClick={() => setActiveInfo('Different AI tools are designed for different tasks, such as text, images, or data analysis.')}/>
+                
+                <img src={InterpretingOutputs} alt="interpert-output-img" className="practical-img"
+                    onClick={() => setActiveInfo('AI outputs should be reviewed, understood, and adapted rather than used without reflection.')}/>
+                
+                <img src={Limitations} alt="limitations-img" className="practical-img" 
+                    onClick={() => setActiveInfo('Knowing when AI is not suitable for a task is as important as knowing when to use it.')}/>
+                
+                <img src={EffectiveUse} alt="effective-use-info" className="practical-img" 
+                    onClick={() => setActiveInfo('Effective AI use often requires refining prompts and inputs based on previous results.')}/>
+                
+                <div className="active-info">{activeInfo}</div>
 
-                <div className="practical-problems">
-                    <div className="problem">
-                        <h2>Prompting</h2>
-                        <p className="problem-text">
-                            Writing clear and precise instructions helps AI produce more useful and relevant results.
-                        </p>
-                    </div>
-
-                    <div className="problem">
-                        <h2>Choosing the right tool</h2>
-                        <p className="problem-text">
-                            Different AI tools are designed for different tasks, such as text, images, or data analysis.
-                        </p>
-                    </div>
-
-                    <div className="problem">
-                        <h2>Interpreting results</h2>
-                        <p className="problem-text">
-                            AI outputs should be reviewed, understood, and adapted rather than used without reflection.
-                        </p>
-                    </div>
-
-                    <div className="problem">
-                        <h2>Iteration</h2>
-                        <p className="problem-text">
-                            Effective AI use often requires refining prompts and inputs based on previous results.
-                        </p>
-                    </div>
-
-                    <div className="problem">
-                        <h2>Understanding limitations</h2>
-                        <p className="problem-text">
-                            Knowing when AI is not suitable for a task is as important as knowing when to use it.
-                        </p>
-                    </div>
-                    
-                </div>
-
-
+*/}
             </div>
         </div>
     )

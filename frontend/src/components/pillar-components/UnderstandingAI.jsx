@@ -10,6 +10,11 @@ import { useState } from "react";
 function UnderstandingAI(){
 
     const [activeInfo , setActiveInfo] = useState("");
+    const [visible , setVisibility] = useState(false);
+
+    const showinfo = () => {
+        setVisibility(true)
+    }
 
     return(
 
@@ -33,23 +38,42 @@ function UnderstandingAI(){
                 <div className="understanding-images">
 
                     <img src={machineLearning} alt="machine-learning-img" className="fields-img"
-                        onClick={() => setActiveInfo('Machine Learning – Systems that learn patterns from data instead of being explicitly programmed.')}/>
+                        onClick={() => {
+                            setActiveInfo('Machine Learning – Systems that learn patterns from data instead of being explicitly programmed.');
+                            showinfo();
+                        }}/>
 
                     <img src={languageProcessing} alt="language-processing-img" className="fields-img"
-                        onClick={() => setActiveInfo('Natural Language Processing – Enables machines to understand and generate human language.')}/>
+                        onClick={() => {
+                            setActiveInfo('Natural Language Processing – Enables machines to understand and generate human language.');
+                            showinfo();
+                        }}/>
 
                     <img src={neuralNetworks} alt="neural-networks-img" className="fields-img" 
-                        onClick={() => setActiveInfo('Neural Networks – Models inspired by the human brain, used to recognize complex patterns.')}/>
+                        onClick={() => {
+                            setActiveInfo('Neural Networks – Models inspired by the human brain, used to recognize complex patterns.');
+                            showinfo();
+                        }}/>
 
                     <img src={dataStatistics} alt="data-statistics-img" className="fields-img" 
-                        onClick={() => setActiveInfo('Data & Statistics – The foundation that allows AI systems to learn, predict, and improve.')}/>
+                        onClick={() => {
+                            setActiveInfo('Data & Statistics – The foundation that allows AI systems to learn, predict, and improve.');
+                            showinfo();
+                        }}/>
 
                     <img src={computerVision} alt="computer-vision-img" className="fields-img" 
-                        onClick={() => setActiveInfo('Computer Vision – Allows AI to interpret images and videos.')}/>
+                        onClick={() => {
+                            setActiveInfo('Computer Vision – Allows AI to interpret images and videos.');
+                            showinfo();
+                        }}/>
                     
                 </div>
 
-                <div className="field-info">{activeInfo}</div>
+                <div className="field-info"
+                    style={{display: visible ? 'block' : 'none' }}
+                >
+                        {activeInfo}
+                </div>
 
                 <div className="understanding-limits">
 
