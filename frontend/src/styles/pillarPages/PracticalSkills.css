@@ -34,15 +34,29 @@
     column-gap: 30px;
     width: 60%;
 }
-.practical-img {
+.fields-img {
     flex: 0 0 30%;
     width: 20%;
     height: 20%;
     object-fit: cover;
     border-radius: 9px;
 }
-.practical-img:hover {
+.fields-img:hover {
     opacity: 0.5;
+}
+.field-info {
+    display: block;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 35px;
+    padding: 22px;
+    border-radius: 12px;
+    background-color: rgb(59, 54, 54);
+    color: white;
+    box-shadow: 0 2px 10px rgb(234, 129, 8);
+    border: 1px solid rgb(59, 54, 54);
 }
 .practical-facit {
     margin-top: 60px;

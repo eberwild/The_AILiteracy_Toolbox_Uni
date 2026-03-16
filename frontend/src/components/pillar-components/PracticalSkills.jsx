@@ -1,10 +1,16 @@
 import MainHeader from "../../components/MainHeader";
 import '../../styles/pillarPages/PracticalSkills.css';
 import { useState } from "react";
+import Prompting from '../../assets/pillarPages/practical-skills/prompting.png';
+import ToolSelection from '../../assets/pillarPages/practical-skills/tool-selection.png';
+import InterpretingOutputs from '../../assets/pillarPages/practical-skills/interpreting.png';
+import Limitations from '../../assets/pillarPages/practical-skills/limitations.png';
+import EffectiveUse from '../../assets/pillarPages/practical-skills/effective-use.png';
 
 function PracticalSkills() {
 
     const [activeInfo , setActiveInfo] = useState('');
+    const [visible , setVisibility] = useState(false);
 
     return(
 
@@ -25,25 +31,43 @@ function PracticalSkills() {
 
             <div className="practical-fields">
 
-{/*
-                <img src={Prompting} alt="prompting-img" className="practical-img"
-                    onClick={() => setActiveInfo('Writing clear and precise instructions helps AI produce more useful and relevant results.')}/>
-                
-                <img src={ToolSelection} alt="select-tool-img" className="practical-img"
-                    onClick={() => setActiveInfo('Different AI tools are designed for different tasks, such as text, images, or data analysis.')}/>
-                
-                <img src={InterpretingOutputs} alt="interpert-output-img" className="practical-img"
-                    onClick={() => setActiveInfo('AI outputs should be reviewed, understood, and adapted rather than used without reflection.')}/>
-                
-                <img src={Limitations} alt="limitations-img" className="practical-img" 
-                    onClick={() => setActiveInfo('Knowing when AI is not suitable for a task is as important as knowing when to use it.')}/>
-                
-                <img src={EffectiveUse} alt="effective-use-info" className="practical-img" 
-                    onClick={() => setActiveInfo('Effective AI use often requires refining prompts and inputs based on previous results.')}/>
-                
-                <div className="active-info">{activeInfo}</div>
 
-*/}
+                <img src={Prompting} alt="prompting-img" className="fields-img"
+                    onClick={() => {
+                        setActiveInfo('Prompting - Writing clear and precise instructions helps AI produce more useful and relevant results.');
+                        setVisibility(true);
+                    }}/>
+                
+                <img src={ToolSelection} alt="select-tool-img" className="fields-img"
+                    onClick={() => {
+                        setActiveInfo('Toolselection - Different AI tools are designed for different tasks, such as text, images, or data analysis.');
+                        setVisibility(true);
+                    }}/>
+                
+                <img src={InterpretingOutputs} alt="interpert-output-img" className="fields-img"
+                    onClick={() => {
+                        setActiveInfo('Interpreting Outputs - AI outputs should be reviewed, understood, and adapted rather than used without reflection.');
+                        setVisibility(true);
+                    }}/>
+                
+                <img src={Limitations} alt="limitations-img" className="fields-img" 
+                    onClick={() => {
+                        setActiveInfo('Limitations - Knowing when AI is not suitable for a task is as important as knowing when to use it.');
+                        setVisibility(true);
+                    }}/>
+                
+                <img src={EffectiveUse} alt="effective-use-info" className="fields-img" 
+                    onClick={() => {
+                        setActiveInfo('Effective use - Effective AI use often requires refining prompts and inputs based on previous results.');
+                        setVisibility(true);
+                    }}/>
+                
+                <div className="field-info"
+                    style={{display: visible ? 'block' : 'none'}}>
+                    {activeInfo}
+                </div>
+
+
             </div>
         </div>
     )
