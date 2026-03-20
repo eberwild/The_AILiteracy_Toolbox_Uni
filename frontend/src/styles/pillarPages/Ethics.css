@@ -24,6 +24,26 @@
     line-height: 1.5;
     text-align: center;
 }
+.ethic-fields {
+    margin-top: 60px;
+    width: 55%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 30px;
+}
+.fields-img {
+    flex: 0 0 30%;
+    width: 17%;
+    height: 17%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+.fields-img:hover {
+    opacity: 0.5;
+}
 .ethic-info {
     margin-top: 40px;
     display: flex;
