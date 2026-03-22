@@ -22,7 +22,7 @@ function ContactPage() {
                         The project was continued and finalized as part of a Bachelor thesis. During this phase, additional functionalities were 
                         implemented and existing tools were refined, transforming the toolbox into a complete and fully functional educational resource.
                         
-                        The project was supervised by <a className='prof-link' href="https://iachounta.com/website/">Prof. Dr. Irene‑Angelica Chounta</a>
+                        The project was supervised by <a className='prof-link' href="https://iachounta.com/website/" target='blank'>Prof. Dr. Irene‑Angelica Chounta</a>
                         , Professor of Computational Methods in Modeling and Analysis of Learning Processes at the University of Duisburg‑Essen. 
                         Her research focuses on computational learning analytics, 
                         AI in education, and educational technologies, providing valuable guidance on educational and technical aspects of the project.

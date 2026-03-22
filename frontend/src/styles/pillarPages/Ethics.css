@@ -36,11 +36,11 @@
 }
 .fields-img {
     flex: 0 0 30%;
-    width: 17%;
-    height: 17%;
+    width: 30%;
+    height: auto;
     object-fit: cover;
     border-radius: 9px;
-}
+} 
 .fields-img:hover {
     opacity: 0.5;
 }
