@@ -34,7 +34,7 @@ function AddToolPage() {
         setVisible(true);
 
         if(timerRef.current){
-            clearTimeout(timerRef);
+            clearTimeout(timerRef.current);
         }
 
         timerRef.current = setTimeout(() => {
@@ -57,9 +57,15 @@ function AddToolPage() {
             }
         } catch(err){
             console.log('Error in submitting tool:' , err.message);
-            showServerResponse(err.response.data.message);
+            
+            const fallbackMessage =
+                err.response?.data?.message || 'Demo Mode: Tool has been submitted';
+
+            showServerResponse(fallbackMessage);
         }
+                    
     }
+            
 
     // send emails after a new tool is submitted successfully
     async function sendEmails(input) {
@@ -186,7 +192,7 @@ function AddToolPage() {
                         }}
                         required
                 >
-                <option value="" disabled selected>Select age range</option>
+                <option value="" disabled>Select age range</option>
                 <option value="all">All ages</option>
                 <option value="5-12">Kids (5-12)</option>
                 <option value="13-17">Teens (13-17)</option>
@@ -225,7 +231,13 @@ function AddToolPage() {
                         className="submit-button"
                         onClick={async () => {
 
-                            await insertNewTool(toolInput);
+                            //await insertNewTool(toolInput);
+                            const result = await checkToolInput(toolInput);
+                            if(result.status){
+                                showServerResponse('Demo Mode : ToolInput checked and emails would have been send.')
+                            } else {
+                                showServerResponse(result.text);
+                            }
                                 
                         }}
                 >

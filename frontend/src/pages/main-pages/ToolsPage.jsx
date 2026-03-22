@@ -55,6 +55,8 @@ function ToolsPage() {
                 setTools(response.data);
             }catch(err){
                 console.log('Error in fetching tools:' , err.message);
+                // for frontenddeployment
+                setTools([]);
             } finally {
                 setIsLoading(false);
             }
@@ -70,6 +72,8 @@ function ToolsPage() {
             setRatings(response.data);
         }catch(error){
             console.log('Error in fetching ratings: ' , error.message);
+            // for frontenddeployment
+            setRatings({})
         }
     }
 
@@ -99,6 +103,7 @@ function ToolsPage() {
             console.log(response.data.message);
         } catch(error) {
             console.error('Error in submit Rating: ' , error.message);
+            setRatingMenuOpen(false);
         }
     }
 
@@ -137,7 +142,7 @@ function ToolsPage() {
 
             {isLoading ? 
                 (
-                    <div>Loading Tools..</div>
+                    <div>Demo Mode : no tools loaded</div>
                 ) 
             : 
             filteredTools && filteredTools.length > 0 ? 
