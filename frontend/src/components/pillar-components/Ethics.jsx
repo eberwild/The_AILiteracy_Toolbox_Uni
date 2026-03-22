@@ -73,28 +73,6 @@ function Ethics() {
 
             </div>
 
-            <div className="ethic-problems">
-                
-
-                <div className="problem">
-                    <h2>Transparency</h2>
-                    <p className="problem-text">
-                       Users should understand when and how AI is being used, and what its limitations are.
-                    </p>
-                </div>
-
-                
-
-                <div className="problem">
-                    <h2>Human responsibility</h2>
-                    <p className="problem-text">
-                       AI does not make moral decisions — humans remain responsible for outcomes.
-                    </p>
-                </div>
-
-                
-
-            </div>
 
             <div className="ethic-facit">
                 <p className="ethic-facit-text">
