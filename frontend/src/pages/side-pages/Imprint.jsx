@@ -1,5 +1,4 @@
 import MainHeader from '../../components/MainHeader';
-import Footer from '../../components/Footer';
 import '../../styles/sidePages/Imprint.css';
 
 function Imprint () {
@@ -43,8 +42,6 @@ function Imprint () {
                 </div>
                 
             </div>
-
-            <Footer/>
 
         </div>
     )
