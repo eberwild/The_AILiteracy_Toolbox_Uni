@@ -84,11 +84,12 @@ function ToolsPage() {
         getRatings();
     } , [])
 
-
     // filter for tools including the current search value
-    const filteredTools =  tools?.filter((tool) => {
-        return tool.title.toLowerCase().includes(search.toLowerCase())
-    });
+    const filteredTools = Array.isArray(tools)
+    ? tools.filter((tool) =>
+        tool.title.toLowerCase().includes(search.toLowerCase())
+      )
+    : [];
 
     const submitRating = async (rating , id) => {
         try {
