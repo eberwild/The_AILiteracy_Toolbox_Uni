@@ -86,7 +86,7 @@ function ToolsPage() {
 
 
     // filter for tools including the current search value
-    const filteredTools =  tools.filter((tool) => {
+    const filteredTools =  tools?.filter((tool) => {
         return tool.title.toLowerCase().includes(search.toLowerCase())
     });
 
