@@ -25,11 +25,6 @@ function PillarPage() {
 
             <MainHeader/>
 
-            <div className='pillar-info'>
-            <h2>The 4 Pillars of AI Literacy</h2>
-                <div className="pillar-spacer"></div>
-            </div>
-
 
             <div className="pillar-section">
                             

@@ -165,7 +165,7 @@ function ToolsPage() {
                 ) 
             : 
                 (      
-                    <div>No tools loaded..</div>
+                    <div>Demo Mode: no tools loaded</div>
                 )
             }
 
