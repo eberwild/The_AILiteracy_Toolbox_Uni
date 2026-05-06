@@ -5,7 +5,7 @@ import path from "path";
 
 export async function testRepoStructure(repoUrl) {
 
-  // 🔒 Basic Security: nur GitHub erlauben
+  // only allow github repos 
   const gitRegex = /^https?:\/\/(www\.)?github\.com\/[^/\s]+\/[^/\s]+(\/.*)?$/;
   if (!gitRegex.test(repoUrl)) {
     return { status: false, text: "Only GitHub repositories are allowed." };
@@ -15,10 +15,10 @@ export async function testRepoStructure(repoUrl) {
   const projectPath = tmpDir.name;
 
   try {
-    // ⚡ Shallow Clone für Performance
+    // shallow clone for better performance
     await simpleGit().clone(repoUrl, projectPath, ["--depth", "1"]);
 
-    // 📁 Pfade sauber bauen
+    // build all possible paths clean
     const indexPath = path.join(projectPath, "index.html");
     const packageJsonPath = path.join(projectPath, "package.json");
     const requirementsPath = path.join(projectPath, "requirements.txt");
@@ -78,6 +78,7 @@ export async function testRepoStructure(repoUrl) {
       };
     }
 
+    // if the repo passed the structure test
     return {
       status: true,
       text: `Repo is a valid ${projectType} project`
