@@ -231,13 +231,7 @@ function AddToolPage() {
                         className="submit-button"
                         onClick={async () => {
 
-                            const result = await checkToolInput(toolInput);
-                            if(result.status){
-                                await insertNewTool(toolInput);
-                                showServerResponse(result.text);
-                            } else {
-                                showServerResponse(result.text);
-                            }
+                            await insertNewTool(toolInput);
                                 
                         }}
                 >

@@ -9,7 +9,7 @@ export const insertTool = (input) => {
         name: input.name,
         title: input.title,
         provider_email: input.email,
-        type: input.type,
+        tags: input.tags,
         git_URL: input.gitURL,
         img_URL: input.imgURL,
         age_recom: input.ageRecom,

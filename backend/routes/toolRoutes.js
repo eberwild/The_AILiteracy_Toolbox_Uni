@@ -5,6 +5,6 @@ import { submissionLimiter } from '../middleware/limiter.js';
 const toolRouter = express.Router();
 
 toolRouter.get('/' , fetchallTools);
-toolRouter.post('/', submissionLimiter  , provideNewTool);
+toolRouter.post('/', provideNewTool);
 
 export default toolRouter;

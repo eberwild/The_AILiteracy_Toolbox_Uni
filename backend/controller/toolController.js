@@ -23,7 +23,6 @@ export const provideNewTool = async(req , res) => {
             name,
             title,
             email,
-            type,
             gitURL,
             imgURL,
             ageRecom,
@@ -55,19 +54,13 @@ export const provideNewTool = async(req , res) => {
             });
         }
 
-        if(!type){
-            return res.status(400).json({
-                message: "Please select one type for your tool."
-            })
-        }
-
         // test if the submitted repoURL is structured like we defined it
-        const validGitRepoStructure = await testRepoStructure(gitURL);
+        /*const validGitRepoStructure = await testRepoStructure(gitURL);
         if (!validGitRepoStructure.status) {
             return res.status(400).json({ 
                 message: validGitRepoStructure.text 
             });
-        }
+        } */
     
         // insert tool into table
         const [id] = await insertTool(req.body);

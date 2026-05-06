@@ -27,13 +27,12 @@ export const checkToolInput = async (object) => {
         };
     }
 
-    // check type 
-    const types = ["game" , "education" , "quiz" , "other"];
-    if(!types.includes(object.type)){
+    // check tags 
+    if (!object.tags || object.tags.trim() === '') {
         return {
-            status: false ,
-            text: 'Please select one type for your tool.'
-        }
+            status: false,
+            text: 'Please enter at least one tag.'
+        };
     }
 
     // check GitHub URL
