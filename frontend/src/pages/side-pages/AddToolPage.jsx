@@ -231,10 +231,10 @@ function AddToolPage() {
                         className="submit-button"
                         onClick={async () => {
 
-                            //await insertNewTool(toolInput);
                             const result = await checkToolInput(toolInput);
                             if(result.status){
-                                showServerResponse('Demo Mode : ToolInput checked and emails would have been send.')
+                                await insertNewTool(toolInput);
+                                showServerResponse(result.text);
                             } else {
                                 showServerResponse(result.text);
                             }
