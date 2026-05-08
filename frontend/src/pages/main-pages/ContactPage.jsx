@@ -66,14 +66,13 @@ function ContactPage() {
                 <p className="contact-intro">
                 Got questions, suggestions, or ideas for collaboration?<br/>
                 <br/>
-                Email: Colabs@UniEmail.de
+                Email: <span className='colaps-email'>colapsresearch@gmail.com</span>
+
                 <br/>
                 Not sure if you need to contact us? Maybe your question has already been answered. 
                 Check out our FAQ section — we’ve gathered some of the most common queries to help you out quickly!
                 </p>
             </div>
-
-            
 
             <Footer/>
 

@@ -14,12 +14,9 @@
     border-radius: 10px; 
     padding: 20px; 
 } 
-.prof-link {
+.colaps-email {
     text-decoration: none;
     color: #f07f0e;
-}
-.prof-link:hover {
-    text-decoration: underline;
 }
 .contact-intro-section {
     display: flex;

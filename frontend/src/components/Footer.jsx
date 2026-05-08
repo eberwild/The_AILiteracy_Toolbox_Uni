@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router';
 import '../styles/components/Footer.css';
 
 function Footer() {
@@ -7,7 +6,12 @@ function Footer() {
         <>
             <footer className='footer'>
                 <p>© 2026 Kevin Flotow | Bachelorarbeit Angewandte Informatik – Universität Duisburg-Essen</p>
-                <NavLink className='impressum-link' to="/imprint">Imprint</NavLink>
+                <a className='impressum-link' 
+                    href="https://colaps.team/impressum/" 
+                    target='blank'
+                >
+                    Imprint
+                </a>
             </footer>
         </>
     )
