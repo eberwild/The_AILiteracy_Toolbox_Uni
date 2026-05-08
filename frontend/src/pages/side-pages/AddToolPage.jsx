@@ -57,11 +57,7 @@ function AddToolPage() {
             }
         } catch(err){
             console.log('Error in submitting tool:' , err.message);
-            
-            const fallbackMessage =
-                err.response?.data?.message || 'Demo Mode: Tool has been submitted';
-
-            showServerResponse(fallbackMessage);
+            showServerResponse();
         }
                     
     }
