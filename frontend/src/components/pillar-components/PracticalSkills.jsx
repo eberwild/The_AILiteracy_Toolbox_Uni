@@ -1,11 +1,11 @@
 import MainHeader from "../../components/MainHeader";
 import '../../styles/pillarPages/PracticalSkills.css';
 import { useState } from "react";
-import Prompting from '../../assets/pillarPages/practical-skills/prompting.png';
-import ToolSelection from '../../assets/pillarPages/practical-skills/tool-selection.png';
-import InterpretingOutputs from '../../assets/pillarPages/practical-skills/interpreting.png';
-import Limitations from '../../assets/pillarPages/practical-skills/limitations.png';
-import EffectiveUse from '../../assets/pillarPages/practical-skills/effective-use.png';
+import Prompting from '../../assets/pillarPages/practical-skills/prompting2.png';
+import ToolSelection from '../../assets/pillarPages/practical-skills/tool-selection2.png';
+import InterpretingOutputs from '../../assets/pillarPages/practical-skills/interpreting2.png';
+import Limitations from '../../assets/pillarPages/practical-skills/limitations2.png';
+import EffectiveUse from '../../assets/pillarPages/practical-skills/effective-use2.png';
 
 function PracticalSkills() {
 

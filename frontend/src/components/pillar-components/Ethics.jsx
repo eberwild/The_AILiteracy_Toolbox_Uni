@@ -1,9 +1,9 @@
 import MainHeader from "../../components/MainHeader";
 import '../../styles/pillarPages/Ethics.css';
 import { useState } from 'react';
-import Fairness from '../../assets/pillarPages/ethic/Fair.png';
+import Fairness from '../../assets/pillarPages/ethic/fairness2.png';
 import Transparency from '../../assets/pillarPages/ethic/Transparency.png';
-import Responsibility from '../../assets/pillarPages/ethic/Respon.png';
+import Responsibility from '../../assets/pillarPages/ethic/Responsibility.png';
 import SocialImpact from '../../assets/pillarPages/ethic/Social.png';
 import DataProtection from '../../assets/pillarPages/ethic/Data.png';
 
